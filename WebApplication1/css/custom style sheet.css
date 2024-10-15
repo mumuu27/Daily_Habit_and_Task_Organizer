@@ -1,0 +1,76 @@
+﻿
+.footerlinks {
+    color: #ffffff;
+    text-decoration: underline #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 20px;
+}
+
+    .footerlinks:hover {
+        color: purple;
+    }
+
+#footer1 {
+    color: black !important;
+    padding: 10px !important;
+    /*background: linear-gradient(to top, #783737c6, #fbc0c0) !important;*/
+    background-color: #4d6160;
+}
+
+#footer2 {
+    color: black !important;
+    padding: 10px !important;
+    /*background: linear-gradient(to top,#663838ff,#783737c6) !important;*/
+    background-color: #292522;
+}
+
+div {
+    /*margin:5px !important;*/
+    padding: 5px !important;
+    font-family: Georgia;
+}
+
+li {
+    padding: 10px !important;
+}
+
+#gradient-background1 {
+    margin: 0px !important;
+    /* padding: 3px !important;*/
+    font-size: 15px;
+    background-color: #efd9b4;
+    font-family: 'Times New Roman', Times, serif;
+}
+#gradient-background3 {
+    margin: 0px !important;
+    /* padding: 3px !important;*/
+    font-size: 15px;
+    background-color: #efd9b4;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#gradient-background2 {
+    margin: 0px !important;
+    /* padding: 3px !important; #a39081*/
+    background-color: #d6a692;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    /*background: linear-gradient(to bottom,#d6a692,#4d6160) !important;*/
+}
+#gradient-background4 {
+    margin: 0px !important;
+    /* padding: 3px !important;#d6a692 #a39081*/
+    background-color: #d6a692;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    /*background: linear-gradient(to bottom,#d6a692,#4d6160) !important;*/
+}
+section {
+    margin: 60px;
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to the next line if they exceed the container width */
+}
+.completed-task {
+    text-decoration: line-through !important;
+}

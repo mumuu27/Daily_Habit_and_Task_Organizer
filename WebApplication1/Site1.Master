@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%-- our custom style sheet --%>
+    <link href="css/custom%20style%20sheet.css" rel="stylesheet" />
+    <%-- bootstrap css --%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%-- datatables  css --%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%-- fontawesome css --%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%--bootstrap jsss--%>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div style="padding: 0px; margin-top: 0px; margin-bottom: 0px; margin-top: 0px; margin: 0px">
+                <div id="gradient-background1" style="margin-top: 0px; margin-bottom: 0px; margin-top: 0px; margin: 0px">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+                        <div class="container-fluid" style="margin-top: 0px; margin-bottom: 0px; margin-top: 0px; margin: 0px" id="gradient-background1">
+                            <a style="font-family: Cinzel, serif; font-size: 36px; font-weight: bold; font-variant: small-caps; color: black;">
+                                <img src="imgs/target.png" style="width: 110px; height: auto; opacity: 2" />
+                               LifeClock</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                <a class="navbar-brand" href="#"></a>
+
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" aria-current="page" href="homepage.aspx">Home</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="AboutUs.aspx">About us</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <asp:LinkButton class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" ID="LinkButtonFeat" runat="server"  Visible="False">
+Features
+                                        </asp:LinkButton>                                       
+                                        <ul class="dropdown-menu" style="background: #783737c6">
+                                            <li><a class="dropdown-item" href="ToDoList.aspx">Task manager</a></li>
+                                            <li><a class="dropdown-item" href="HabitTracking.aspx">Habit Tracker</a></li>
+                                            <li><a class="dropdown-item" href="Journaling.aspx">Journaling</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div style="margin-top: 0px; margin-bottom: 0px; margin-top: 0px; margin: 0px" id="gradient-background2">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid" style="margin-top: 0px; margin-bottom: 0px; margin-top: 0px; margin: 0px" id="gradient-background2">
+                            <a class="navbar-brand" href="#"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                    <li class="nav-item active">
+                                        <asp:LinkButton CssClass="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
+            Reviews
+                                        </asp:LinkButton>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <asp:LinkButton CssClass="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">
+                               Login                                              </asp:LinkButton>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <asp:LinkButton CssClass="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">
+                               Sign Up
+                                        </asp:LinkButton>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <asp:LinkButton CssClass="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" Visible="False">
+            Log Out
+                                        </asp:LinkButton>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <asp:LinkButton CssClass="nav-link" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" Visible="False">
+            Helloo!!!
+                                        </asp:LinkButton>
+                                    </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- main content placeholder (changeable)-->
+        <div style="background: linear-gradient(to bottom,#a39081,#40503aa6) !important">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- main content placeholder-->
+        <!--footer-->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton7"
+                                runat="server" Text="Admin Login" OnClick="LinkButton7_Click">Admin Login
+                            </asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton8"
+                                runat="server" OnClick="LinkButton8_Click" Visible="False">Member Management
+                            </asp:LinkButton>
+                            &nbsp;                          
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color: whitesmoke">&copy All right Resered.</p>
+                        <p style="font-style: normal !important; font-variant: small-caps"><a class="footerlinks" href="homepage.aspx" target="_blank"><strong>Daily Habit & Task Organizer </strong></a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer-->
+    </form>
+</body>
+</html>
